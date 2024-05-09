@@ -10,6 +10,7 @@
     $valor = $_GET["v"];
     $rq = sqrt($valor);
     echo "A raiz de $valor e igual a $rq";
+    // exemplo github
    ?>
 </body>
 </html>
