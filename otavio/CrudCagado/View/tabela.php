@@ -51,12 +51,11 @@ $resultado = BuscarAluno();
                     // echo '<br/>';
 
                     echo '<tr>';
-                    echo  "<th scope='row'>" . $valor['idcurso'] . "</th>";
+                    echo  "<th scope='row'>" . $valor['id'] . "</th>";
                     echo "<td>" . $valor['nome'] . "</td>";
-                    echo "<td>" . $valor['descricao'] . "</td>";
-                    echo "<td>" . $valor['carga'] . "</td>";
-                    echo "<td>" . $valor['totaulas'] . "</td>";
-                    echo "<td>" . $valor['ano'] . "</td>";
+                    echo "<td>" . $valor['nome_item'] . "</td>";
+                    echo "<td>" . $valor['preco'] . "</td>";
+                    echo "<td>" . $valor['quantidade'] . "</td>";
                     // echo $valor['nome'];
                     // echo ' - ';
                     // echo $valor['descricao'];

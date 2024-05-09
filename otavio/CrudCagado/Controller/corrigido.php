@@ -5,5 +5,7 @@
     $preco = isset($_GET["preco"])?$_GET["preco"]:"[sem preco}";
     $quantidade = isset($_GET["quant"])?$_GET["quant"]:"[sem quant}";
     //var_dump($nome, $item, $preco, $quantidade);
-    insert($nome, $item, $preco, $quantidade)
+    insert($nome, $item, $preco, $quantidade);
+    header('Location: ../View/tabela.php');
+  exit;
 ?>
