@@ -11,6 +11,7 @@
     $rq = sqrt($valor);
     echo "A raiz de $valor e igual a $rq";
     // exemplo github
+    // Pc Otavio
    ?>
 </body>
 </html>
