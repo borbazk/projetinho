@@ -43,9 +43,14 @@
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    function insert(){;
+
+
+    function insert($nome, $item, $preco, $quantidade){
         $pdo = conexao(); 
-        $sth = $pdo->prepare('INSERT INTO vaisefuder.MERCEARIA_FORGE(id, nome, nome_item, preco, quantidade)value(6, jvaScript, Curso de JavaScript, 35, 18, 2017)');
+    //$sql = "INSERT INTO mercearia_forge values (DEFAULT , '". $nome . "', '" . $item . "',". $preco . "', '". $quantidade ."' )";
+    $sql = "INSERT INTO mercearia_forge values (DEFAULT, '{$nome}', '$item', '$preco', '$quantidade')";
+        echo $sql . "</br>";
+        $sth = $pdo->prepare($sql);
         $resultado = $sth->execute();
     
       //  $resultado = $sth->fetchAll();
