@@ -16,7 +16,7 @@ $resultado = BuscarAluno();
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-<form action="inserir.php" method="get">
+<form action="iserir.php" method="get">
 
     <head>
         <meta charset="UTF-8">
@@ -40,6 +40,8 @@ $resultado = BuscarAluno();
                     <th scope="col">nome_item</th>
                     <th scope="col">preco</th>
                     <th scope="col">quantidade</th>
+                    <th scope="col">snome</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -51,16 +53,20 @@ $resultado = BuscarAluno();
                     // echo '<br/>';
 
                     echo '<tr>';
-                    echo  "<th scope='row'>" . $valor['id'] . "</th>";
+                    echo  "<th scope='row'>" . $valor['id'] . "</th>" ;
                     echo "<td>" . $valor['nome'] . "</td>";
                     echo "<td>" . $valor['nome_item'] . "</td>";
                     echo "<td>" . $valor['preco'] . "</td>";
                     echo "<td>" . $valor['quantidade'] . "</td>";
+                    echo "<td>" . '<a class="btn btn-outline-secondary btn-sm" href="iserir.php?Id=' . $valor['id']. '" role="button">editar</a>        ' . '<button type="submit" class="btn btn-outline-danger btn-sm">deletar</button>' . "</td>";
+ 
                     // echo $valor['nome'];
                     // echo ' - ';
                     // echo $valor['descricao'];
                     echo '</tr>';
                 }
+                
+
                 ?>
 
             </tbody>

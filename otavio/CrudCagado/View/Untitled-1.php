@@ -1,19 +1,8 @@
 <?php
-function insertEcho($var){
-    $b=$var + 1;
-    echo $b;
-}
+include_once '../Conexao/BancoD.php';
 
-function insertreturn($var){
-    $b=$var + 1;
-    return $b;
-}
 
-$z = 1;
 
-$a = insertEcho($z);
+$resultado = selectPorId(1);
 
-var_dump($a);
-// echo $a;
-// echo $a;
-// echo $a;
+var_dump($resultado);
