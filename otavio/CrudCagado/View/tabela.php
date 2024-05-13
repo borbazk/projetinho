@@ -27,8 +27,14 @@ $resultado = BuscarAluno();
 
     <body class='container'>
         <div class="d-grid gap-2 col-6 mx-auto">
-            <h1 class="col-9">Dados da Tabela</h1>
-            <a class="btn btn-primary" href="iserir.php" role="button">Inserir</a>        </div>
+            <div class="row text-center">
+                <h1 class="col-12">Dados da Tabela</h1>
+            </div>
+            <div class="row">
+                <a class="btn btn-primary" href="iserir.php" role="button">Inserir</a>
+            </div>
+        </div>
+
         <table class="table table-striped">
 
 
@@ -37,11 +43,11 @@ $resultado = BuscarAluno();
                 <tr>
                     <th scope="col">id</th>
                     <th scope="col">nome</th>
-                    <th scope="col">nome_item</th>
+                    <th scope="col">nome item</th>
                     <th scope="col">preco</th>
                     <th scope="col">quantidade</th>
-                    <th scope="col">snome</th>
-                    
+                    <th scope="col">ações</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -53,19 +59,19 @@ $resultado = BuscarAluno();
                     // echo '<br/>';
 
                     echo '<tr>';
-                    echo  "<th scope='row'>" . $valor['id'] . "</th>" ;
+                    echo  "<th scope='row'>" . $valor['id'] . "</th>";
                     echo "<td>" . $valor['nome'] . "</td>";
                     echo "<td>" . $valor['nome_item'] . "</td>";
                     echo "<td>" . $valor['preco'] . "</td>";
                     echo "<td>" . $valor['quantidade'] . "</td>";
-                    echo "<td>" . '<a class="btn btn-outline-secondary btn-sm" href="iserir.php?Id=' . $valor['id']. '" role="button">editar</a>        ' . '<button type="submit" class="btn btn-outline-danger btn-sm">deletar</button>' . "</td>";
- 
+                    echo "<td>" . '<a class="btn btn-outline-secondary btn-sm" href="iserir.php?Id=' . $valor['id'] . '&acao=editar" role="button">editar</a>        ' . '<button type="submit" class="btn btn-outline-danger btn-sm">deletar</button>' . "</td>";
+
                     // echo $valor['nome'];
                     // echo ' - ';
                     // echo $valor['descricao'];
                     echo '</tr>';
                 }
-                
+
 
                 ?>
 

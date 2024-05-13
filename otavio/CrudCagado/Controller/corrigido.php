@@ -6,6 +6,7 @@
     $quantidade = isset($_GET["quant"])?$_GET["quant"]:"[sem quant}";
     //var_dump($nome, $item, $preco, $quantidade);
     insert($nome, $item, $preco, $quantidade);
+    update($_GET['Id'], $nome, $item, $preco, $quantidade);
     header('Location: ../View/tabela.php');
   exit;
 ?>

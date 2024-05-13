@@ -13,9 +13,9 @@ function conexao()
 // // DELETE
 // // INSERT
 
-function selectPorId($id){
+function selectPorId($nome){
     $pdo = conexao();
-    $sth = $pdo->prepare("SELECT * FROM MERCEARIA_FORGE WHERE id = '$id'" );
+    $sth = $pdo->prepare("SELECT * FROM MERCEARIA_FORGE WHERE id = '$nome'" );
     $sth->execute();
 
     $resultado = $sth->fetchAll();
@@ -72,10 +72,13 @@ function insert($nome, $item, $preco, $quantidade)
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-function update()
+function update($id, $nome, $item, $preco, $quantidade)
 {;
     $pdo = conexao();
-    $sth = $pdo->prepare('UPDATE vaisefuder.MERCEARIA_FORGE SET nome = "otavio" WHERE id = 4');
+    $sql = "UPDATE vaisefuder.MERCEARIA_FORGE SET nome = '$nome',  nome_item = '$item', preco = '$preco', quantidade = '$quantidade' WHERE id = $id";
+    echo $sql . "</br>";
+    $sth = $pdo->prepare($sql);
+ 
     $resultado = $sth->execute();
 
     //  $resultado = $sth->fetchAll();

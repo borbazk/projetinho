@@ -1,12 +1,14 @@
 <?php
-function select()
-{
-    $pdo = conexao();
-    $sth = $pdo->prepare('SELECT * FROM MERCEARIA_FORGE ORDER BY id');
-    $sth->execute();
+include_once '../Conexao/BancoD.php';
+// $array = array(
+//     'id' => 1,
+//     'nome' => 2
+// );
+$nome =  'Rafa';
+$item =  'Salame bem grande';
+$preco =  '20';
+$quantidade =  '5';
+$id = '2';
+update($id, $nome, $item, $preco, $quantidade)
 
-    $resultado = $sth->fetchAll();
-
-    return $resultado;
-}
 ?>
