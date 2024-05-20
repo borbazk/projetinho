@@ -39,10 +39,12 @@ function select()
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-function delete()
-{;
+function delete($id)
+{
     $pdo = conexao();
-    $sth = $pdo->prepare('DELETE FROM $tabela WHERE $coluna = $valor');
+    $sql = "DELETE FROM mercearia_forge WHERE id = $id";
+    var_dump($sql);
+    $sth = $pdo->prepare($sql);
     $resultado = $sth->execute();
 
     // $resultado = $sth->fetchAll();
@@ -73,13 +75,14 @@ function insert($nome, $item, $preco, $quantidade)
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function update($id, $nome, $item, $preco, $quantidade)
-{;
-    $pdo = conexao();
+{
+    $pdo = conexao(); 
     $sql = "UPDATE vaisefuder.MERCEARIA_FORGE SET nome = '$nome',  nome_item = '$item', preco = '$preco', quantidade = '$quantidade' WHERE id = $id";
     echo $sql . "</br>";
     $sth = $pdo->prepare($sql);
  
     $resultado = $sth->execute();
+    
 
     //  $resultado = $sth->fetchAll();
 

@@ -64,7 +64,9 @@ $resultado = BuscarAluno();
                     echo "<td>" . $valor['nome_item'] . "</td>";
                     echo "<td>" . $valor['preco'] . "</td>";
                     echo "<td>" . $valor['quantidade'] . "</td>";
-                    echo "<td>" . '<a class="btn btn-outline-secondary btn-sm" href="iserir.php?Id=' . $valor['id'] . '&acao=editar" role="button">editar</a>        ' . '<button type="submit" class="btn btn-outline-danger btn-sm">deletar</button>' . "</td>";
+                    echo "<td>" . '<a class="btn btn-outline-secondary btn-sm" href="iserir.php?Id=' . $valor['id'] . '&acao=editar" role="button">editar</a>'        
+                        . '<a type="submit" class="btn btn-outline-danger btn-sm"  href="../Controller/deletar.php?Id=' . $valor['id'] . '&acao=deletar" role="button">deletar</a>' . 
+                    "</td>";
 
                     // echo $valor['nome'];
                     // echo ' - ';

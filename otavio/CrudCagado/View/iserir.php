@@ -13,7 +13,7 @@ error_reporting(E_ERROR | E_PARSE | E_NOTICE);
 </head>
 
 <body class='container'>
-  <form method="get" action="../Controller/corrigido.php?Acao=<?= $_GET['acao'] ?>">
+  <form method="get" action="../Controller/corrigido.php?Acao=<?= $_GET['acao'] ?> ">
     
     <?php
    
@@ -49,6 +49,7 @@ error_reporting(E_ERROR | E_PARSE | E_NOTICE);
     <div class="col-sm-6 ">
       <label for="firstName" class="form-label">Nome</label>
       <input type="text" name='nome' class="form-control" id="firstName" placeholder="" value='<?=$nome?>' required>
+      <input type="text" name='acao' class="form-control" id="acao" placeholder="" value='<?=$_REQUEST['acao']?>' hidden>
     </div>
     <div class="col-sm-6">
       <label for="lastName" class="form-label">Item</label>
