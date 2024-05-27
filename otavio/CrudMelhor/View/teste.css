@@ -1,0 +1,7 @@
+input:not(:placeholder-shown) {
+    border-color: green;
+  }
+
+  input:placeholder-shown {
+    border-color: red;
+  }

@@ -12,24 +12,25 @@
 
 <body>
    <form action="">
-    <input type="text" id="hugo" class="form-control">
-    <input type="text" id="karate" class="form-control">
+    <input type="text" id="hugo" class="form-control mb-2" placeholder="Primeiro Valor">
+    <input type="text" id="karate" class="form-control mb-2" placeholder="Segundo Valor">
+    <input type="text" id="vasco" class="form-control mb-2" placeholder="Terceiro Valor">
     
-    <button type="button" class="btn btn-primary" onclick="Enviar('somar')">somar</button>
-    <button type="button" class="btn btn-primary" onclick="Enviar('vezes')">multiplicar</button>
+    <button type="button" class="btn btn-primary" onclick="Enviar('somarw')">somar</button>
+    <button type="button" class="btn btn-primary" onclick="Enviar('multiplicar')">multiplicar</button>
     <button type="button" class="btn btn-primary" onclick="Enviar('divisao')">Divisao</button>
+    <button type="button" class="btn btn-primary" onclick="Enviar('subtrair')">subtrair</button>
 
     <p id="fodase"></p>
    </form>
-   
+    
    <script>
         let Enviar = (operacao = '') => {
         let Dados = {
             valor1 : document.getElementById('hugo').value,
             valor2 : document.getElementById('karate').value,
-            valor3 : operacao
-            //valor3 : document.getElementById('zabuza').value,
-            ///valor4 : document.getElementById('asma').value
+            valor3 : document.getElementById('vasco').value,
+            operacao : operacao
         }
     
         let config = {
